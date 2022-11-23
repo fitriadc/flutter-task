@@ -1,6 +1,7 @@
+import 'package:first_program/page/to_do_page.dart';
 import 'package:flutter/material.dart';
 
-import 'main.dart';
+import 'page/main.dart';
 
 class MyFormPage extends StatefulWidget {
   const MyFormPage({super.key});
@@ -53,7 +54,16 @@ class _MyFormPageState extends State<MyFormPage> {
                 );
               },
             ),
-
+          ListTile(
+            title: const Text('To Do'),
+            onTap: () {
+                // Route menu ke halaman to do
+                Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const ToDoPage()),
+                );
+            },
+        ),
           ],
         ),
       ),
